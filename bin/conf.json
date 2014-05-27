@@ -1,0 +1,8 @@
+{
+    "fields" : ["name"],
+    "mixField": "Country code",
+    "files" : {
+        "pop.csv" : "2012 Population"
+    }
+
+}
