@@ -1,1 +1,2 @@
 pop.csv https://data.undp.org/dataset/Table-14-Population-trends/e6xu-b22v
+life_expectancy https://data.undp.org/dataset/Life-expectancy-at-birth-years-/7q3h-ym65

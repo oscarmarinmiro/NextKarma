@@ -1,8 +1,14 @@
 {
-    "fields" : ["name"],
-    "mixField": "Country code",
     "files" : {
-        "pop.csv" : "2012 Population"
+        "pop.csv" : {
+                    "key" : "Name",
+                    "nullValue": "",
+                    "fields":
+                    {
+                        "name" : "Name",
+                        "code": "Country Code",
+                        "population" : "2012 Population"
+                    }
+        }
     }
-
 }
