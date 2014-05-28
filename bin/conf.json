@@ -9,6 +9,23 @@
                         "code": "Country Code",
                         "population" : "2012 Population"
                     }
+        },
+        "life_expectancy.csv": {
+                    "key" : "Country",
+                    "nullValue": "..",
+                    "fields":
+                    {
+                        "life_expectancy" : "2012"
+                    }
+        },
+        "hdi.csv": {
+                    "key" : "Name",
+                    "nullValue": "na",
+                    "fields":
+                    {
+                        "gross_income" : "2012 Gross National Income (GNI) per capita"
+                    }
         }
-    }
+    },
+    "outputFile": "countriesData.json"
 }

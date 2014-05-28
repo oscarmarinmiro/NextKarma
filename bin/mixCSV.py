@@ -64,9 +64,20 @@ def main():
 
 
         pprint.pprint(myStruct)
-    # Dump struct to CSV
+
+    # (TODO) Dump struct to CSV
 
     # Dump struct to JSON
+
+    fileOutName = confData['outputFile']
+
+    print fileOutName
+
+    fileOut = open(fileOutName,"wb")
+
+    json.dump(myStruct, fileOut)
+
+    fileOut.close()
 
 
 
