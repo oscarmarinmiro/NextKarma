@@ -57,7 +57,8 @@ $(function()
                 myHtml+="<p>After <strong>"+finalData.tries+" random lifes</strong>, ";
                 myHtml+="and a total of <strong>"+finalData.number_of_years.toFixed(0)+" years lived</strong>, ";
                 myHtml+="you arrived at <strong>"+finalData.country+"</strong>, ";
-                myHtml+="with an annual gross income of <strong>"+finalData.gross_income+"</strong> $";
+                myHtml+="with an annual gross income of <strong>"+finalData.gross_income+"</strong>$";
+                myHtml+="</br><strong>It's year "+ (2014.0+finalData.number_of_years).toFixed(0)+"</strong>";
             }
             else
             {
