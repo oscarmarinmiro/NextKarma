@@ -1,3 +1,9 @@
 pop.csv https://data.undp.org/dataset/Table-14-Population-trends/e6xu-b22v
 life_expectancy https://data.undp.org/dataset/Life-expectancy-at-birth-years-/7q3h-ym65
 hdi https://data.undp.org/dataset/Table-1-Human-Development-Index-and-its-components/wxub-qc5k
+
+
+
+http://hdr.undp.org/es/data
+
+http://datos.bancomundial.org/indicador

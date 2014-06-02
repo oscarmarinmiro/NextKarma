@@ -1,8 +1,5 @@
 $(document).foundation();
 
-
-
-
 $(function()
 {
 
