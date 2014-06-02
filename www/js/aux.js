@@ -2,10 +2,12 @@
  * Created by Oscar on 28/05/14.
  */
 
-var aux = aux || {'randoms': {}, 'constants': {} };
+var aux = aux || {'randoms': {}, 'constants': {} , 'clean': {} };
 
 aux.constants.grossAdjust = 1.0;
 aux.constants.numberOfMonths = 12;
+aux.constants.maximumIterations = 5000;
+aux.constants.averageLifeExpectancy = 60.0;
 
 aux.randoms.getCountry = function(countryData)
 {
@@ -51,4 +53,45 @@ aux.randoms.getAllData = function(countryData)
     data.monthly_income = (data.gross_adjusted / aux.constants.numberOfMonths);
 
     return data;
+};
+
+aux.randoms.getIterationData = function(countryData, annualValue)
+{
+    var tries = 0;
+    var surpassed = false;
+    var country = null;
+    var gross_income = 0;
+    var accumulated_years = 0;
+
+    while(tries < aux.constants.maximumIterations && !surpassed)
+    {
+        country = aux.randoms.getCountry(countryData);
+        gross_income = countryData[country].gross_income;
+
+        var life_expectancy = parseFloat(countryData[country].life_expectancy);
+
+        if(!isNaN(life_expectancy))
+        {
+            accumulated_years += life_expectancy;
+        }
+        else
+        {
+            accumulated_years += aux.constants.averageLifeExpectancy;
+        }
+
+        if(gross_income > annualValue) surpassed = true;
+
+        tries++;
+    }
+
+    return {'country': country, 'gross_income': gross_income, 'number_of_years': accumulated_years, 'tries': tries, 'surpassed': surpassed};
+
+};
+
+aux.clean.cleanUserIncome = function(string)
+{
+    string = string.replace(",","");
+    string = string.replace(".","");
+
+    return string;
 };

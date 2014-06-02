@@ -3,6 +3,7 @@
   "dependencies": {
     "foundation": "zurb/bower-foundation",
     "d3": "~3.3.9",
-    "chance": null
+    "chance": null,
+    "numeral": null
   }
 }
